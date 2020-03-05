@@ -50,10 +50,10 @@ class App extends Component {
         </Jumbotron>
         <main>
           <div>Image here??</div>
-          <section className="d-flex">
+          <section className="d-flex pt-5 pb-5">
             <div className="col-6">
               <h3>01</h3>
-              <h4>Title here</h4>
+              <h4 className="pb-3">What is gender equality?</h4>
             </div>
             <div className="col-6">
               <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
@@ -63,13 +63,13 @@ class App extends Component {
               </p>
             </div>
           </section>
-          <section className="d-flex">
-            <div className="col-9">
+          <section className="d-flex pt-5 pb-5">
+            <div className="col-8">
               <div>Image here??</div>
             </div>
-            <div className="col-3">
+            <div className="col-4">
               <h3>02</h3>
-              <h4>Title here</h4>
+              <h4 className="pb-3">What do you value in a business?</h4>
               <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
@@ -77,9 +77,9 @@ class App extends Component {
               </p>
             </div>
           </section>
-          <section>
+          <section className="pt-5">
             <h3>03</h3>
-            <h4>Title here</h4>
+            <h4 className="pb-3">Search here for the business </h4>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
               natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
@@ -112,6 +112,15 @@ class App extends Component {
                 }
               })}
             </div>
+          </section>
+          <section className="centered pt-5 pb-5">
+            <h3>04</h3>
+            <h4 className="pb-3">Let us know what you think</h4>
+            <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
+              natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
+            </p>
           </section>
         </main>
         <footer>

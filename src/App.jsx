@@ -390,6 +390,10 @@ class App extends Component {
             <h5>
               Get in touch to see how our services can make an impact on your business. Hire our
               consulting services and achieve grow company results.
+              <br />
+              <br />
+              <br />
+              <p>Contact: equalitycollective@info.com</p>
             </h5>
             <p></p>
           </section>

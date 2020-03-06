@@ -129,11 +129,30 @@ h5 {
 }
 
 .comparison-bar {
-  height: 2em;
+  height: 2.5rem !important;
+}
+
+.comparison-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.comparison-icon i {
+  font-size: 2em;
 }
 
 .progress-bar {
   background-color: #73bf88 !important;
+}
+
+.centered {
+  text-align: center;
+}
+
+.progress {
+  height: 1.5rem;
 }
 
 .bg-success {
@@ -282,6 +301,9 @@ main {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
   position: relative;
   bottom: 0;
   left: 0;
@@ -289,4 +311,21 @@ footer {
   min-height: 100px;
   padding: 50px;
   background-color: #e9ecef;
+  font-size: smaller;
+}
+footer div {
+  margin-right: 2.5em;
+}
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+.datamadeby {
+  margin-right: 8.5em;
+}
+.madeby {
+  display: flex;
+}
+smaller {
+  font-weight: bold;
 }

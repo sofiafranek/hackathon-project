@@ -50,6 +50,16 @@ class App extends Component {
     }
   }
 
+  randomKey(length) {
+    let result = '';
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
+
   scrollTop() {
     window.scrollTo(0, 0);
   }
@@ -85,7 +95,7 @@ class App extends Component {
           <section className="d-flex pt-5 pb-5 spacing-small">
             <div className="col-6">
               <h3>
-                <i class="fas fa-equals"></i>
+                <i className="fas fa-equals"></i>
               </h3>
               <h4 className="pb-5">Check which companies value equality</h4>
             </div>
@@ -121,7 +131,6 @@ class App extends Component {
               <h4 className="pb-5">Discover ways to make your company more gender equal</h4>
               <h5>Are you a company that want to improve Gender Equality In The Workplace?</h5>
               <p>
-                {' '}
                 You are in the right place. We provide the best ideas and practises. Stereotypes are
                 still an issue in business. Employees are often judged by their gender, not their
                 abilities. As a business owner, we can you help change this situation – and get the
@@ -144,10 +153,10 @@ class App extends Component {
               {this.state.businesses.map(business => {
                 if (
                   business.name.toLowerCase().includes(this.state.search) ||
-                  business.calories.toLowerCase().includes(this.state.search)
+                  business.type.toLowerCase().includes(this.state.search)
                 ) {
                   return (
-                    <Accordion defaultActiveKey="0" className="pt-3 pb-3">
+                    <Accordion defaultActiveKey="0" className="pt-3 pb-3" key={this.randomKey(50)}>
                       <Card className="hvr-grow">
                         <Card.Header>
                           <Accordion.Toggle as={Button} variant="link" eventKey="1">
@@ -168,7 +177,7 @@ class App extends Component {
                                 </div>
                               </section>
                             </div>
-                            <ProgressBar now={60} />
+                            <ProgressBar now={JSON.stringify(business.men_company)} />
                           </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="1">
@@ -179,63 +188,160 @@ class App extends Component {
                                 <ProgressBar
                                   variant="success"
                                   now={JSON.stringify(business.men_company)}
-                                  label={business.men_company}
+                                  label={business.men_company + '%'}
                                   key={1}
                                 />
                                 <ProgressBar
                                   variant="warning"
                                   now={JSON.stringify(100 - business.men_company)}
-                                  label={100 - business.men_company}
+                                  label={100 - business.men_company + '%'}
+                                  key={2}
+                                />
+                              </ProgressBar>
+                            </section>
+                            <h5>Number of women to men per position salaries</h5>
+                            <small>Manager salary comparsion</small>
+                            <section className="d-flex justify-content-center centered">
+                              <div className="col-4">
+                                <h5>Women</h5>
+                                <h4>{business.avgsal_women_manager}€</h4>
+                              </div>
+                              <div className="col-4 comparison-icon">
+                                <i className="fas fa-not-equal"></i>
+                                <small>difference caluclate maybe?</small>
+                              </div>
+                              <div className="col-4">
+                                <h5>Male</h5>
+                                <h4>{business.avgsal_man_manager}€</h4>
+                              </div>
+                            </section>
+                            <small>director salary comparsion</small>
+                            <section className="d-flex justify-content-center centered">
+                              <div className="col-4">
+                                <h5>Women</h5>
+                                <h4>{business.avgsal_women_director}€</h4>
+                              </div>
+                              <div className="col-4 comparison-icon">
+                                <i className="fas fa-not-equal"></i>
+                                <small>difference caluclate maybe?</small>
+                              </div>
+                              <div className="col-4">
+                                <h5>Male</h5>
+                                <h4>{business.avgsal_man_director}€</h4>
+                              </div>
+                            </section>
+                            <small>intern salary comparsion</small>
+                            <section className="d-flex justify-content-center centered">
+                              <div className="col-4">
+                                <h5>Women</h5>
+                                <h4>{business.avgsal_women_intern}€</h4>
+                              </div>
+                              <div className="col-4 comparison-icon">
+                                <i className="fas fa-not-equal"></i>
+                                <small>difference caluclate maybe?</small>
+                              </div>
+                              <div className="col-4">
+                                <h5>Male</h5>
+                                <h4>{business.avgsal_man_intern}€</h4>
+                              </div>
+                            </section>
+
+                            <section>
+                              <h5>Wages in different positions</h5>
+                              <small>assistant men</small>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar
+                                  variant="success"
+                                  now={JSON.stringify(business.assistant_men)}
+                                  label={business.assistant_men + '%'}
+                                  key={1}
+                                />
+                                <ProgressBar
+                                  variant="warning"
+                                  now={JSON.stringify(100 - business.assistant_men)}
+                                  label={100 - business.assistant_men + '%'}
+                                  key={2}
+                                />
+                              </ProgressBar>
+                              <small>director men</small>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar
+                                  variant="success"
+                                  now={JSON.stringify(business.director_men)}
+                                  label={business.director_men + '%'}
+                                  key={1}
+                                />
+                                <ProgressBar
+                                  variant="warning"
+                                  now={JSON.stringify(100 - business.director_men)}
+                                  label={100 - business.director_men + '%'}
+                                  key={2}
+                                />
+                              </ProgressBar>
+                              <small>specialit in the field the business is in</small>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar
+                                  variant="success"
+                                  now={JSON.stringify(business.specialist_men)}
+                                  label={business.specialist_men + '%'}
+                                  key={1}
+                                />
+                                <ProgressBar
+                                  variant="warning"
+                                  now={JSON.stringify(100 - business.specialist_men)}
+                                  label={100 - business.specialist_men + '%'}
                                   key={2}
                                 />
                               </ProgressBar>
                             </section>
                             <section>
-                              <h5>Number of women to men per position</h5>
-                              <ProgressBar className="comparison-bar">
-                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
-                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
-                              </ProgressBar>
-                            </section>
-                            <section>
-                              <h5>Wages in different positions</h5>
+                              <h5>People hired after 30+</h5>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
-                                  now={JSON.stringify(business.assistant_men)}
-                                  label={business.assistant_men}
+                                  now={JSON.stringify(business.men_after30)}
+                                  label={business.men_after30 + '%'}
                                   key={1}
                                 />
-                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
-                              </ProgressBar>
-                              <ProgressBar className="comparison-bar">
-                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
-                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
-                              </ProgressBar>
-                              <ProgressBar className="comparison-bar">
-                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
-                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
-                              </ProgressBar>
-                            </section>
-                            <section>
-                              <h5>People hired after 30+</h5>
-                              <ProgressBar className="comparison-bar">
-                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
-                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                                <ProgressBar
+                                  variant="warning"
+                                  now={JSON.stringify(100 - business.men_after30)}
+                                  label={100 - business.men_after30 + '%'}
+                                  key={2}
+                                />
                               </ProgressBar>
                             </section>
                             <section>
                               <h5>Gender and type of contract relation</h5>
+                              <small>contact type temporary</small>
                               <ProgressBar className="comparison-bar">
-                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
-                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                                <ProgressBar
+                                  variant="success"
+                                  now={JSON.stringify(business.men_temp)}
+                                  label={business.men_temp + '%'}
+                                  key={1}
+                                />
+                                <ProgressBar
+                                  variant="warning"
+                                  now={JSON.stringify(100 - business.men_temp)}
+                                  label={100 - business.men_temp + '%'}
+                                  key={2}
+                                />
                               </ProgressBar>
-                            </section>
-                            <section>
-                              <h5>Number of gender applicants or interns</h5>
+                              <small>contact type permanant</small>
                               <ProgressBar className="comparison-bar">
-                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
-                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                                <ProgressBar
+                                  variant="success"
+                                  now={JSON.stringify(business.men_fixed)}
+                                  label={business.men_fixed + '%'}
+                                  key={1}
+                                />
+                                <ProgressBar
+                                  variant="warning"
+                                  now={JSON.stringify(100 - business.men_fixed)}
+                                  label={100 - business.men_fixed + '%'}
+                                  key={2}
+                                />
                               </ProgressBar>
                             </section>
                           </Card.Body>
@@ -255,7 +361,24 @@ class App extends Component {
           </section>
         </main>
         <footer>
-          <p>footer is here</p>
+          <span>© JAN 2020 IRONHACK </span>
+          <div className="madeby">
+            <div className="datamadeby">
+              <small>Data Analytics by</small>
+              <ul>
+                <li>José Pereira</li>
+                <li>Tiago Dias</li>
+              </ul>
+            </div>
+            <div>
+              <small>Web Development by</small>
+              <ul>
+                <li>Sofia Franek</li>
+                <li>Raquel Coelho</li>
+                <li>Filipe Nunes</li>
+              </ul>
+            </div>
+          </div>
         </footer>
       </div>
     );

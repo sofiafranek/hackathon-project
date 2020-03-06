@@ -95,12 +95,12 @@ class App extends Component {
             <Container>
               <h1 className="pb-3">Equality Collective</h1>
               <h2>
-                We are a government subsidised company that created a simplified approach to measure
-                national gender equality in working environment. We aim to promote gender equality
-                in the workforce and requiring companies to report gender gap metrics and
-                increasingly implementing their own policies to close gender gaps.The aim of gender
-                equality in the workplace is to achieve broadly equal opportunities and outcomes for
-                women and men.
+                We are a company that created a simplified approach to measure national gender
+                equality in working environments. We work directly for the Government, auditing
+                companies in order to verify if they comply with the designated standards for gender
+                equality in the workplace. We aim to promote gender equality in the workforce and
+                requiring companies to report gender gap metrics and increasingly implementing their
+                own policies to close gender gaps.
               </h2>
             </Container>
           </Jumbotron>
@@ -140,15 +140,13 @@ class App extends Component {
                 </h3>
                 <h4 className="pb-5">Check the companies with the best practices</h4>
               </div>
-              <h5>Companies that offer parental bennefits</h5>
+              <h5>Go for the green ones</h5>
               <p>
                 To achieve this requires: Workplaces to provide equal pay for work of equal or
                 comparable value Removal of barriers to the full and equal participation of women in
                 the workforce Access to all occupations and industries, including leadership roles,
                 regardless of gender; and Elimination of discrimination on the basis of gender,
-                particularly in relation to family and caring responsibilities. Offers flex-time,
-                pays a living wage, has a strategy to close the gender pay gap and offers paid
-                family leave to both parents.
+                particularly in relation to family and caring responsibilities.
               </p>
             </div>
           </section>
@@ -179,7 +177,7 @@ class App extends Component {
             <h3 className="centered pb-3">
               <img className="icon" src="./Images/search.png" alt="icon" />
             </h3>
-            <h4 className="pb-3 centered"> Search</h4>
+            <h4 className="pb-3 centered"> Search Now</h4>
             <Search search={this.searchBusiness} filter={this.filterBusiness} />
             <div className="businessContainer">
               {/* businesses being rendered here */}
@@ -196,14 +194,12 @@ class App extends Component {
                             <h2>{business.name}</h2>
                             <div className="pb-3 d-flex">
                               <section className="col-12 d-flex">
+                                <div className="indiviudal col-4">Industry: {business.type}</div>
                                 <div className="indiviudal col-4">
                                   Number of Employees: {business.num_of_employees}
                                 </div>
                                 <div className="indiviudal col-4">
                                   Business Age : {business.company_age}
-                                </div>
-                                <div className="indiviudal col-4">
-                                  Business Type: {business.type}
                                 </div>
                               </section>
                             </div>
@@ -216,7 +212,7 @@ class App extends Component {
                         <Accordion.Collapse eventKey="1">
                           <Card.Body className="comparisons">
                             <section className="pt-0">
-                              <h5>Men to Female </h5>
+                              <h5>Male to Female </h5>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -232,8 +228,8 @@ class App extends Component {
                                 />
                               </ProgressBar>
                             </section>
-                            <h5>Men to Female Salaries</h5>
-                            <h6>Director Comparsion</h6>
+                            <h5>Male to Female Salaries</h5>
+                            <h6>Director Comparison</h6>
                             <section className="d-flex justify-content-center text">
                               <div className="col-4">
                                 <h5>Male</h5>
@@ -247,38 +243,38 @@ class App extends Component {
                                 <h4>{business.avgsal_women_director}€</h4>
                               </div>
                             </section>
-                            <h6>Manager Comparsion</h6>
+                            <h6>Manager Comparison</h6>
                             <section className="d-flex justify-content-center text">
-                              <div className="col-4">
-                                <h5>Female</h5>
-                                <h4>{business.avgsal_women_manager}€</h4>
-                              </div>
-                              <div className="col-4 comparison-icon">
-                                <i className="fas fa-not-equal"></i>
-                              </div>
                               <div className="col-4">
                                 <h5>Male</h5>
                                 <h4>{business.avgsal_man_manager}€</h4>
                               </div>
-                            </section>
-                            <h6>Intern Comparsion</h6>
-                            <section className="d-flex justify-content-center text">
+                              <div className="col-4 comparison-icon">
+                                <i className="fas fa-not-equal"></i>
+                              </div>
                               <div className="col-4">
                                 <h5>Female</h5>
-                                <h4>{business.avgsal_women_intern}€</h4>
+                                <h4>{business.avgsal_women_manager}€</h4>
+                              </div>
+                            </section>
+                            <h6>Intern Comparison</h6>
+                            <section className="d-flex justify-content-center text">
+                              <div className="col-4">
+                                <h5>Male</h5>
+                                <h4>{business.avgsal_man_intern}€</h4>
                               </div>
                               <div className="col-4 comparison-icon">
                                 <i className="fas fa-not-equal"></i>
                               </div>
                               <div className="col-4">
-                                <h5>Male</h5>
-                                <h4>{business.avgsal_man_intern}€</h4>
+                                <h5>Female</h5>
+                                <h4>{business.avgsal_women_intern}€</h4>
                               </div>
                             </section>
 
                             <section className="multiple-bars">
                               <h5>Wages in different positions</h5>
-                              <h6>Director Men to Female</h6>
+                              <h6>Director Male to Female</h6>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -293,7 +289,7 @@ class App extends Component {
                                   key={2}
                                 />
                               </ProgressBar>
-                              <h6>Specialist in Field Men to Female</h6>
+                              <h6>Specialist in Field Male to Female</h6>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -308,7 +304,7 @@ class App extends Component {
                                   key={2}
                                 />
                               </ProgressBar>
-                              <h6>Assistant Men to Female</h6>
+                              <h6>Assistant Male to Female</h6>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -343,7 +339,7 @@ class App extends Component {
                             </section>
                             <section className="multiple-bars">
                               <h5>Type of Contract Relation</h5>
-                              <h6>Men to Female Contract Type - Temporary</h6>
+                              <h6>Male to Female Contract Type - Temporary</h6>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -358,7 +354,7 @@ class App extends Component {
                                   key={2}
                                 />
                               </ProgressBar>
-                              <h6>Men to Female Contract Type - Permanent</h6>
+                              <h6>Male to Female Contract Type - Permanent</h6>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -381,7 +377,10 @@ class App extends Component {
                   );
                 }
               })}
-              No Business or Industry found, please try again
+              {/* if (this.state.search !== this.business.name || this.business.type) {
+                  return 'No Business or Industry found, please try again';
+                } */}
+              {/* No Business or Industry found, please try again */}
             </div>
           </section>
           <section className="centered pt-5 pb-5 contact">
@@ -398,23 +397,10 @@ class App extends Component {
           </section>
         </main>
         <footer>
-          <span>© JAN 2020 IRONHACK </span>
-          <div className="madeby">
-            <div className="datamadeby">
-              <small>Data Analytics by</small>
-              <ul>
-                <li>José Pereira</li>
-                <li>Tiago Dias</li>
-              </ul>
-            </div>
-            <div>
-              <small>Web Development by</small>
-              <ul>
-                <li>Sofia Franek</li>
-                <li>Raquel Coelho</li>
-                <li>Filipe Nunes</li>
-              </ul>
-            </div>
+          <span>© January 2020 IronHackers </span>
+          <div>
+            <p>Web Development by Sofia Franek, Raquel Coelho & Filipe Nunes</p>
+            <p>Data Analytics by José Pereira & Tiago Dias</p>
           </div>
         </footer>
       </div>

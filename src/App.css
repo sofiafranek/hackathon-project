@@ -396,6 +396,9 @@ smaller {
     flex: 0 0 100%;
     max-width: 100%;
   }
+  .text .col-4 {
+    padding-top: 15px;
+  }
   footer {
     display: block;
   }

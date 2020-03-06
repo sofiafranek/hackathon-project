@@ -154,7 +154,7 @@ select {
 }
 
 .image-one {
-  background-image: url('./Images/claudio-schwarz-purzlbaum-0S4YWDymjkg-unsplash.jpg');
+  background-image: url('./Images/genderequalitysymbolpic.jpg');
   width: 100%;
   height: 500px;
   background-size: cover;
@@ -162,7 +162,7 @@ select {
 }
 
 .image-two {
-  background-image: url('./Images/rochelle-brown-u9m8Z8c9_T4-unsplash.jpg');
+  background-image: url('./Images/you-x-ventures-Oalh2MojUuk-unsplash.jpg');
   width: 100%;
   height: 500px;
   background-size: cover;
@@ -170,11 +170,15 @@ select {
 }
 
 .image-three {
-  background-image: url('./Images/kon-karampelas-YHUB8CuYWXI-unsplash.jpg');
+  background-image: url('./Images/photo-of-people-holding-each-other-s-hands-3184434.jpg');
   width: 100%;
   height: 400px;
   background-size: cover;
   background-position: center;
+}
+
+.icon {
+  max-width: 40px;
 }
 
 .space {

@@ -75,21 +75,30 @@ class App extends Component {
                 We are a government subsidised company that created a simplified approach to measure
                 national gender equality in working environment. We aim to promote gender equality
                 in the workforce and requiring companies to report gender gap metrics and
-                increasingly implementing their own policies to close gender gaps.
+                increasingly implementing their own policies to close gender gaps.The aim of gender
+                equality in the workplace is to achieve broadly equal opportunities and outcomes for
+                women and men.
               </h2>
             </Container>
           </Jumbotron>
           <div className="image-one"></div>
           <section className="d-flex pt-5 pb-5 ">
             <div className="col-6">
-              <h3>01</h3>
+              <h3>
+                {' '}
+                <img className="icon" src="./Images/laptop.png" alt="icon" />
+              </h3>
               <h4 className="pb-5">Check which companies values equality</h4>
             </div>
             <div className="col-6">
               <h5>Are you a joob seeker?</h5>
               <p>
                 Deciding where to apply for a job can be challenging – if equal employment
-                opportunity matters to you, check organisations that value that principle.
+                opportunity matters to you, check organisations that value that principle. Workplace
+                gender equality is achieved when people are able to access and enjoy the same
+                rewards, resources and opportunities regardless of gender. The aim of gender
+                equality in the workplace is to achieve broadly equal outcomes for women and men,
+                not necessarily outcomes that are exactly the same for all.
               </p>
             </div>
           </section>
@@ -99,19 +108,30 @@ class App extends Component {
             </div>
             <div className="col-4">
               <div className="space">
-                <h3>02</h3>
+                <h3>
+                  {' '}
+                  <img className="icon" src="./Images/volunteer.png" alt="icon" />
+                </h3>
                 <h4 className="pb-5">Check the companies with the best practices</h4>
               </div>
               <h5>Companies that offer parental bennefits</h5>
               <p>
-                Offers flex-time, pays a living wage, has a strategy to close the gender pay gap and
-                offers paid family leave to both parents
+                To achieve this requires: Workplaces to provide equal pay for work of equal or
+                comparable value Removal of barriers to the full and equal participation of women in
+                the workforce Access to all occupations and industries, including leadership roles,
+                regardless of gender; and Elimination of discrimination on the basis of gender,
+                particularly in relation to family and caring responsibilities. Offers flex-time,
+                pays a living wage, has a strategy to close the gender pay gap and offers paid
+                family leave to both parents.
               </p>
             </div>
           </section>
           <section className="d-flex pt-5 pb-5">
             <div className="col-5">
-              <h3>03</h3>
+              <h3>
+                {' '}
+                <img className="icon" src="./Images/equal.png" alt="icon" />
+              </h3>
               <h4 className="pb-5">Discover ways to make your company more gender equal</h4>
               <h5>Are you a company that want to improve Gender Equality In The Workplace?</h5>
               <p>
@@ -119,7 +139,10 @@ class App extends Component {
                 You are in the right place. We provide the best ideas and practises. Stereotypes are
                 still an issue in business. Employees are often judged by their gender, not their
                 abilities. As a business owner, we can you help change this situation – and get the
-                best out of all your staff.
+                best out of all your staff. Workplace gender equality is associated with: Improved
+                national productivity and economic growth. Increased organisational performance
+                Enhanced ability of companies to attract talent and retain employees. Enhanced
+                organisational reputation.
               </p>
             </div>
             <div className="col-7">
@@ -127,9 +150,10 @@ class App extends Component {
             </div>
           </section>
           <section className="pt-5">
-            <h3>04</h3>
-            <h4 className="pb-5">Search here for the business </h4>
-            <p>Search by industry type or company name.</p>
+            <h3>
+              <img className="icon" src="./Images/search.png" alt="icon" />
+            </h3>
+            <h4 className="pb-5"> Search here for the business:</h4>
             <Search search={this.searchBusiness} />
             <div className="businessContainer">
               {/* businesses being rendered here */}
@@ -216,8 +240,11 @@ class App extends Component {
           </section>
           <section className="centered pt-5 pb-5">
             <h3>05</h3>
-            <h4 className="pb-3">Let us know what you think</h4>
-            <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
+            <h4 className="pb-3">Contac us</h4>
+            <h5>
+              Get in touch to see how our services can make an impact on your business. Hire our
+              consulting services and achieve grow company results.
+            </h5>
             <p></p>
           </section>
         </main>

@@ -372,6 +372,9 @@ smaller {
   .d-flex {
     display: block !important;
   }
+  .logo-pic {
+    margin: 0 15px 0 15px;
+  }
   .contact {
     margin: 20px auto !important;
   }

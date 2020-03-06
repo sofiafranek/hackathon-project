@@ -61,33 +61,12 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar>
-<<<<<<< HEAD
-          <Navbar.Brand href="#home">
-            <img src="./Images/genderpic.png" alt="genderpic" />
-            Gender Equality
-          </Navbar.Brand>
-=======
           <Navbar.Brand onClick={this.scrollTop}>Gender Equality</Navbar.Brand>
->>>>>>> 96baaadc59528b3feb2c037ea51d4e671e608db0
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>Government Subsurdised Company</Navbar.Text>
           </Navbar.Collapse>
         </Navbar>
-<<<<<<< HEAD
-        <Jumbotron fluid>
-          <Container>
-            <h1 className="pb-3">The Equality Group</h1>
-            <h2>
-              We are a government subsidised company that created a simplified approach to measure
-              national gender equality in working environment. We aim to promote gender equality in
-              the workforce and requiring companies to report gender gap metrics and increasingly
-              implementing their own policies to close gender gaps.
-            </h2>
-          </Container>
-        </Jumbotron>
-=======
->>>>>>> 96baaadc59528b3feb2c037ea51d4e671e608db0
         <main>
           <Jumbotron fluid>
             <Container>
@@ -99,7 +78,7 @@ class App extends Component {
             </Container>
           </Jumbotron>
           <div className="image-one"></div>
-          <section className="d-flex pt-5 pb-5">
+          <section className="d-flex pt-5 pb-5 ">
             <div className="col-6">
               <h3>01</h3>
               <h4 className="pb-5">Check which companies values equality</h4>
@@ -148,16 +127,11 @@ class App extends Component {
           <section className="pt-5">
             <h3>04</h3>
             <h4 className="pb-5">Search here for the business </h4>
-<<<<<<< HEAD
-            <p>Search by industry type or company name.</p>
-            <Search search={this.searchBusiness} />
-=======
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
               natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
             </p>
             <Search search={this.searchBusiness} filter={this.filterBusiness} />
->>>>>>> 96baaadc59528b3feb2c037ea51d4e671e608db0
             <div className="businessContainer">
               {/* businesses being rendered here */}
               {this.state.businesses.map(business => {

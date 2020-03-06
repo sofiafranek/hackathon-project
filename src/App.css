@@ -44,7 +44,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.8em;
+  font-size: 3em;
 }
 
 h4 {
@@ -52,7 +52,8 @@ h4 {
 }
 
 h5 {
-  font-size: 0.9em;
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
 .navbar {

@@ -34,7 +34,10 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar>
-          <Navbar.Brand href="#home">Gender Equality</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <img src="./Images/genderpic.png" alt="genderpic" />
+            Gender Equality
+          </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>Government Subsurdised Company</Navbar.Text>
@@ -44,8 +47,10 @@ class App extends Component {
           <Container>
             <h1 className="pb-3">The Equality Group</h1>
             <h2>
-              We are a government subsidised company that aims to provide job seekers the
-              opportunity to see whether a business values equality.
+              We are a government subsidised company that created a simplified approach to measure
+              national gender equality in working environment. We aim to promote gender equality in
+              the workforce and requiring companies to report gender gap metrics and increasingly
+              implementing their own policies to close gender gaps.
             </h2>
           </Container>
         </Jumbotron>
@@ -54,13 +59,13 @@ class App extends Component {
           <section className="d-flex pt-5 pb-5">
             <div className="col-6">
               <h3>01</h3>
-              <h4 className="pb-5">What is gender equality?</h4>
+              <h4 className="pb-5">Check which companies values equality</h4>
             </div>
             <div className="col-6">
-              <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
+              <h5>Are you a joob seeker?</h5>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
-                natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
+                Deciding where to apply for a job can be challenging – if equal employment
+                opportunity matters to you, check organisations that value that principle.
               </p>
             </div>
           </section>
@@ -71,23 +76,26 @@ class App extends Component {
             <div className="col-4">
               <div className="space">
                 <h3>02</h3>
-                <h4 className="pb-5">What do you value in a business?</h4>
+                <h4 className="pb-5">Check the companies with the best practices</h4>
               </div>
-              <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
+              <h5>Companies that offer parental bennefits</h5>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
-                natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
+                Offers flex-time, pays a living wage, has a strategy to close the gender pay gap and
+                offers paid family leave to both parents
               </p>
             </div>
           </section>
           <section className="d-flex pt-5 pb-5">
             <div className="col-5">
               <h3>03</h3>
-              <h4 className="pb-5">Another title</h4>
-              <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
+              <h4 className="pb-5">Discover ways to make your company more gender equal</h4>
+              <h5>Are you a company that want to improve Gender Equality In The Workplace?</h5>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
-                natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
+                {' '}
+                You are in the right place. We provide the best ideas and practises. Stereotypes are
+                still an issue in business. Employees are often judged by their gender, not their
+                abilities. As a business owner, we can you help change this situation – and get the
+                best out of all your staff.
               </p>
             </div>
             <div className="col-7">
@@ -97,10 +105,7 @@ class App extends Component {
           <section className="pt-5">
             <h3>04</h3>
             <h4 className="pb-5">Search here for the business </h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
-              natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
-            </p>
+            <p>Search by industry type or company name.</p>
             <Search search={this.searchBusiness} />
             <div className="businessContainer">
               {/* businesses being rendered here */}
@@ -134,10 +139,7 @@ class App extends Component {
             <h3>05</h3>
             <h4 className="pb-3">Let us know what you think</h4>
             <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
-              natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
-            </p>
+            <p></p>
           </section>
         </main>
         <footer>

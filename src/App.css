@@ -156,11 +156,15 @@ h5 {
 }
 
 .bg-success {
-  background-color: #779abf !important;
+  background-color: #8ac2cfad !important;
+  font-weight: 900;
+  font-size: 20px;
 }
 
 .bg-warning {
-  background-color: #b877bf !important;
+  background-color: #f582c5c2 !important;
+  font-weight: 900;
+  font-size: 20px;
 }
 
 .btn:focus {
@@ -234,15 +238,9 @@ select {
 }
 
 .image-three {
-<<<<<<< HEAD
   background-image: url('./Images/photo-of-people-holding-each-other-s-hands-3184434.jpg');
   width: 100%;
   height: 400px;
-=======
-  background-image: url('./Images/kon-karampelas-YHUB8CuYWXI-unsplash.jpg');
-  width: 95%;
-  height: 375px;
->>>>>>> c62442f22850960c2b0e0021f00b953fefb634d4
   background-size: cover;
   background-position: center;
   position: absolute;

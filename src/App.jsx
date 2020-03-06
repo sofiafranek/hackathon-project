@@ -89,7 +89,6 @@ class App extends Component {
           </Container>
         </Jumbotron>
         <main>
-<<<<<<< HEAD
           <Jumbotron fluid>
             <Container>
               <h1 className="pb-3">The Equality Group</h1>
@@ -111,17 +110,6 @@ class App extends Component {
                 <img className="icon" src="./Images/laptop.png" alt="icon" />
               </h3>
               <h4 className="pb-5">Check which companies values equality</h4>
-=======
-          <div className="border-offset-left">
-            <div className="image-one"></div>
-          </div>
-          <section className="d-flex pt-5 pb-5 spacing-small">
-            <div className="col-6">
-              <h3>
-                <i className="fas fa-equals"></i>
-              </h3>
-              <h4 className="pb-5">Check which companies value equality</h4>
->>>>>>> c62442f22850960c2b0e0021f00b953fefb634d4
             </div>
             <div className="col-6 padTop">
               <h5>Are you a job seeker?</h5>
@@ -185,18 +173,11 @@ class App extends Component {
               </div>
             </div>
           </section>
-<<<<<<< HEAD
           <section className="pt-5">
             <h3>
               <img className="icon" src="./Images/search.png" alt="icon" />
             </h3>
             <h4 className="pb-5"> Search here for the business:</h4>
-=======
-          <section>
-            <h3>04</h3>
-            <h4 className="pb-5">Search here for the business </h4>
-            <p>Search by industry type or company name.</p>
->>>>>>> c62442f22850960c2b0e0021f00b953fefb634d4
             <Search search={this.searchBusiness} />
             <div className="businessContainer">
               {/* businesses being rendered here */}

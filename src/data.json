@@ -1,68 +1,33 @@
 [
   {
-    "name": "Pizza",
-    "calories": "400",
-    "image": "https://i.imgur.com/eTmWoAN.png",
-    "quantity": 0
-  },
-  {
-    "name": "Salad",
-    "calories": "150",
-    "image": "https://i.imgur.com/DupGBz5.jpg",
-    "quantity": 0
-  },
-  {
-    "name": "Sweet Potato",
-    "calories": "120",
-    "image": "https://i.imgur.com/hGraGyR.jpg",
-    "quantity": 0
-  },
-  {
-    "name": "Gnocchi",
-    "calories": "500",
-    "image": "https://i.imgur.com/93ekwW0.jpg",
-    "quantity": 0
-  },
-  {
-    "name": "Pot Roast",
-    "calories": "350",
-    "image": "https://i.imgur.com/WCzJDWz.jpg",
-    "quantity": 0
-  },
-  {
-    "name": "Lasagna",
-    "calories": "750",
-    "image": "https://i.imgur.com/ClxOafl.jpg",
-    "quantity": 0
-  },
-  {
-    "name": "Hamburger",
-    "calories": "400",
-    "image": "https://i.imgur.com/LoG39wK.jpg",
-    "quantity": 0
-  },
-  {
-    "name": "Pad Thai",
-    "calories": "475",
-    "image": "https://i.imgur.com/5ktcSzF.jpg",
-    "quantity": 0
-  },
-  {
-    "name": "Almonds",
-    "calories": "75",
-    "image": "https://i.imgur.com/JRp4Ksx.jpg",
-    "quantity": 0
-  },
-  {
-    "name": "Bacon",
-    "calories": "175",
-    "image": "https://i.imgur.com/7GlqDsG.jpg",
-    "quantity": 0
-  },
-  {
-    "name": "Hot Dog",
-    "calories": "275",
-    "image": "https://i.imgur.com/QqVHdRu.jpg",
-    "quantity": 0
+    "name": "markt10",
+    "type": "Marketing",
+    "company_age": 20,
+    "num_of_employees": 200,
+    "men_company": 52.5,
+    "manager_men": 47,
+    "assistant_men": 60,
+    "specialist_men": 57,
+    "director_men": 50,
+    "coordinator_men": 62,
+    "analyst_men": 40,
+    "intern_men": 43,
+    "avgsal_women_manager": 3782.0,
+    "avgsal_women_assistant": 902.0,
+    "avgsal_women_specialist": 2660.0,
+    "avgsal_women_director": 5883.0,
+    "avgsal_women_coordinator": 1523.0,
+    "avgsal_women_analyst": 1230.0,
+    "avgsal_women_intern": 918.0,
+    "avgsal_man_manager": 3774.0,
+    "avgsal_man_assistant": 928.0,
+    "avgsal_man_specialist": 2694.0,
+    "avgsal_man_director": 5729.0,
+    "avgsal_man_coordinator": 1504.0,
+    "avgsal_man_analyst": 1263.0,
+    "avgsal_man_intern": 954.0,
+    "men_after30": 56,
+    "men_temp": 54,
+    "men_fixed": 52
   }
 ]

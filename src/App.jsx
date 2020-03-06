@@ -60,14 +60,26 @@ class App extends Component {
         <Navbar>
           <Navbar.Brand href="#home">
             <img className="logo-pic" src="./Images/genderpic.png" alt="genderpic" />
-            Gender Equality
+            Equality Collective
           </Navbar.Brand>
           <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
+          {/* <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>Government Subsurdised Company</Navbar.Text>
-          </Navbar.Collapse>
+          </Navbar.Collapse> */}
         </Navbar>
+        <Jumbotron fluid>
+          <Container>
+            <h1 className="pb-3">Equality Collective</h1>
+            <h2>
+              We are a government subsidised company that created a simplified approach to measure
+              national gender equality in working environment. We aim to promote gender equality in
+              the workforce and requiring companies to report gender gap metrics and increasingly
+              implementing their own policies to close gender gaps.
+            </h2>
+          </Container>
+        </Jumbotron>
         <main>
+<<<<<<< HEAD
           <Jumbotron fluid>
             <Container>
               <h1 className="pb-3">The Equality Group</h1>
@@ -89,9 +101,20 @@ class App extends Component {
                 <img className="icon" src="./Images/laptop.png" alt="icon" />
               </h3>
               <h4 className="pb-5">Check which companies values equality</h4>
-            </div>
+=======
+          <div className="border-offset-left">
+            <div className="image-one"></div>
+          </div>
+          <section className="d-flex pt-5 pb-5 spacing-small">
             <div className="col-6">
-              <h5>Are you a joob seeker?</h5>
+              <h3>
+                <i class="fas fa-equals"></i>
+              </h3>
+              <h4 className="pb-5">Check which companies value equality</h4>
+>>>>>>> c62442f22850960c2b0e0021f00b953fefb634d4
+            </div>
+            <div className="col-6 padTop">
+              <h5>Are you a job seeker?</h5>
               <p>
                 Deciding where to apply for a job can be challenging – if equal employment
                 opportunity matters to you, check organisations that value that principle. Workplace
@@ -103,10 +126,12 @@ class App extends Component {
             </div>
           </section>
           <section className="d-flex pt-5 pb-5">
-            <div className="col-8">
-              <div className="image-two"></div>
+            <div className="col-7">
+              <div className="border-offset-right">
+                <div className="image-two"></div>
+              </div>
             </div>
-            <div className="col-4">
+            <div className="col-5">
               <div className="space">
                 <h3>
                   {' '}
@@ -126,7 +151,7 @@ class App extends Component {
               </p>
             </div>
           </section>
-          <section className="d-flex pt-5 pb-5">
+          <section className="d-flex pt-5 pb-5 spacing">
             <div className="col-5">
               <h3>
                 {' '}
@@ -146,14 +171,23 @@ class App extends Component {
               </p>
             </div>
             <div className="col-7">
-              <div className="image-three"></div>
+              <div className="border-offset-all">
+                <div className="image-three"></div>
+              </div>
             </div>
           </section>
+<<<<<<< HEAD
           <section className="pt-5">
             <h3>
               <img className="icon" src="./Images/search.png" alt="icon" />
             </h3>
             <h4 className="pb-5"> Search here for the business:</h4>
+=======
+          <section>
+            <h3>04</h3>
+            <h4 className="pb-5">Search here for the business </h4>
+            <p>Search by industry type or company name.</p>
+>>>>>>> c62442f22850960c2b0e0021f00b953fefb634d4
             <Search search={this.searchBusiness} />
             <div className="businessContainer">
               {/* businesses being rendered here */}
@@ -171,14 +205,16 @@ class App extends Component {
                             <div className="pb-3 d-flex">
                               <section className="col-6">
                                 <div className="indiviudal">
-                                  Number of Employees: {business.calories}
+                                  Number of Employees: {business.num_of_employees}
                                 </div>
-                                <div className="indiviudal">Business Age : .....</div>
+                                <div className="indiviudal">
+                                  Business Age : {business.company_age}
+                                </div>
                               </section>
                               <section className="col-6">
-                                <div className="indiviudal">Business Type: .....</div>
+                                <div className="indiviudal">Business Type: {business.type}</div>
                                 <div className="indiviudal">
-                                  Special benefits for parenting: .....
+                                  Special benefits for parenting: ...
                                 </div>
                               </section>
                             </div>
@@ -190,8 +226,18 @@ class App extends Component {
                             <section>
                               <h5>Number of women to men</h5>
                               <ProgressBar className="comparison-bar">
-                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
-                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                                <ProgressBar
+                                  variant="success"
+                                  now={JSON.stringify(business.men_company)}
+                                  label={business.men_company}
+                                  key={1}
+                                />
+                                <ProgressBar
+                                  variant="warning"
+                                  now={JSON.stringify(100 - business.men_company)}
+                                  label={100 - business.men_company}
+                                  key={2}
+                                />
                               </ProgressBar>
                             </section>
                             <section>
@@ -203,6 +249,19 @@ class App extends Component {
                             </section>
                             <section>
                               <h5>Wages in different positions</h5>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar
+                                  variant="success"
+                                  now={JSON.stringify(business.assistant_men)}
+                                  label={business.assistant_men}
+                                  key={1}
+                                />
+                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                              </ProgressBar>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
+                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                              </ProgressBar>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar variant="success" now={50} label={'50%'} key={1} />
                                 <ProgressBar variant="warning" now={50} label={'50%'} key={2} />

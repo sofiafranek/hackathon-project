@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Libre Baskerville', serif;
 }
 
 /* Grow */
@@ -33,14 +33,48 @@ body {
   font-family: sans-serif;
 }
 
+.border-offset-left {
+  width: 100%;
+  height: 500px;
+  padding: 15px;
+  background-color: #81b2c7;
+}
+
+.border-offset-right {
+  width: 100%;
+  height: 450px;
+  background-color: #81b2c7;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 10px;
+}
+
+.border-offset-all {
+  width: 100%;
+  height: 300px;
+  background-color: #81b2c7;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
 h1 {
   font-size: 3em;
 }
 
 h2 {
-  font-size: 1.5em;
-  max-width: 700px;
-  font-weight: 100;
+  font-size: 1.2em;
+  max-width: 900px;
+  letter-spacing: 0.1px;
+  line-height: 30px;
+}
+
+.spacing-small {
+  margin: 40px 0;
+}
+
+.spacing {
+  margin: 70px 0;
 }
 
 h3 {
@@ -54,6 +88,8 @@ h4 {
 h5 {
   font-size: 1.2em;
   margin-bottom: 20px;
+  color: #5d88a6;
+  font-weight: bold;
 }
 
 .navbar {
@@ -70,8 +106,17 @@ h5 {
   cursor: pointer;
 }
 
+.navbar-text {
+  margin-right: 50px;
+}
+
+.padTop {
+  padding-top: 180px;
+}
+
 .logo-pic {
   max-width: 40px;
+  margin: 0 15px 0 50px;
 }
 
 .comparisons section {
@@ -79,7 +124,7 @@ h5 {
 }
 
 .jumbotron {
-  margin-top: 56px;
+  margin-top: 66px;
   background-color: white;
 }
 
@@ -164,17 +209,25 @@ select {
 .image-two {
   background-image: url('./Images/you-x-ventures-Oalh2MojUuk-unsplash.jpg');
   width: 100%;
-  height: 500px;
+  height: 485px;
   background-size: cover;
   background-position: center;
 }
 
 .image-three {
+<<<<<<< HEAD
   background-image: url('./Images/photo-of-people-holding-each-other-s-hands-3184434.jpg');
   width: 100%;
   height: 400px;
+=======
+  background-image: url('./Images/kon-karampelas-YHUB8CuYWXI-unsplash.jpg');
+  width: 95%;
+  height: 375px;
+>>>>>>> c62442f22850960c2b0e0021f00b953fefb634d4
   background-size: cover;
   background-position: center;
+  position: absolute;
+  bottom: 20px;
 }
 
 .icon {

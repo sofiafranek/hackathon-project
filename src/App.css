@@ -166,11 +166,15 @@ h5 {
 }
 
 .bg-success {
-  background-color: #779abf !important;
+  background-color: #8ac2cfad !important;
+  font-weight: 900;
+  font-size: 12px;
 }
 
 .bg-warning {
-  background-color: #b877bf !important;
+  background-color: #f582c5c2 !important;
+  font-weight: 900;
+  font-size: 12px;
 }
 
 .btn:focus {

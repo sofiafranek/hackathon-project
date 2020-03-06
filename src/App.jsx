@@ -103,9 +103,7 @@ class App extends Component {
               </h2>
             </Container>
           </Jumbotron>
-          <div className="border-offset-left">
-            <div className="image-one"></div>
-          </div>
+          <div className="image-one"></div>
           <section className="d-flex pt-5 pb-5 ">
             <div className="col-6">
               <h3>
@@ -154,7 +152,6 @@ class App extends Component {
           <section className="d-flex pb-5 spacing">
             <div className="col-5">
               <h3>
-                {' '}
                 <img className="icon" src="./Images/equal.png" alt="icon" />
               </h3>
               <h4 className="pb-5">Discover ways to make your company more gender equal</h4>
@@ -385,6 +382,10 @@ class App extends Component {
             <h5>
               Get in touch to see how our services can make an impact on your business. Hire our
               consulting services and achieve grow company results.
+              <br />
+              <br />
+              <br />
+              <p>Contact: equalitycollective@info.com</p>
             </h5>
             <p></p>
           </section>

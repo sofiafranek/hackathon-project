@@ -1,3 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Grow */
+.hvr-grow {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  box-shadow: 0px 0px 3px 0px lightgray;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+  box-shadow: 0px 0px 5px 0px lightgray;
+}
+
+.search-box {
+  font-family: sans-serif;
+}
+
+.businessContainer {
+  font-family: sans-serif;
+}
+
 h1 {
   font-size: 3em;
 }
@@ -27,10 +62,90 @@ h5 {
   right: 0;
   background-color: white;
   z-index: 99;
+  box-shadow: 0px 0px 3px 0px lightgray;
+}
+
+.navbar-brand {
+  cursor: pointer;
+}
+
+.comparisons section {
+  padding: 30px 0;
 }
 
 .jumbotron {
   margin-top: 56px;
+  background-color: white;
+}
+
+.comparison-bar {
+  height: 2em;
+}
+
+.progress-bar {
+  background-color: #73bf88 !important;
+}
+
+.bg-success {
+  background-color: #779abf !important;
+}
+
+.bg-warning {
+  background-color: #b877bf !important;
+}
+
+.btn:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.indiviudal {
+  margin: 10px 0;
+}
+
+.btn-link:focus {
+  color: black;
+  text-decoration: none;
+}
+
+link:focus {
+  text-decoration: none;
+}
+
+.search-box .col-8 {
+  padding-left: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px 20px;
+  border-radius: 0;
+  border: 1px solid lightgray;
+  background-color: white;
+}
+
+.card-header {
+  padding: 30px;
+}
+
+.businessContainer .col-6 {
+  padding: 0;
+}
+
+.businessContainer h2 {
+  margin-bottom: 10px;
 }
 
 .image-one {
@@ -66,7 +181,6 @@ h5 {
 }
 
 .container {
-  margin: 0 50px;
   padding: 0;
 }
 
@@ -93,18 +207,20 @@ h5 {
 main {
   max-width: 1200px;
   margin: auto;
+  padding: 0 30px;
 }
 
 .progress-bar {
   background-color: lightblue;
 }
 
-.search-box {
-  text-align: center;
+:focus {
+  outline: none;
 }
 
 .search-box input {
-  border: 1px solid lightgrey;
+  border: none;
+  border-bottom: 1px solid lightgrey;
   padding: 10px 20px;
   width: 100%;
 }

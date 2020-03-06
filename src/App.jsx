@@ -22,6 +22,7 @@ class App extends Component {
       search: ''
     };
     this.searchBusiness = this.searchBusiness.bind(this);
+    this.filterBusiness = this.filterBusiness.bind(this);
   }
 
   searchBusiness(word) {
@@ -30,26 +31,52 @@ class App extends Component {
     });
   }
 
+  filterBusiness(filter) {
+    console.log(filter);
+    if (filter === 'ascendingEquality') {
+      this.setState({
+        businesses: [...data].sort(
+          (rankingMin, rankingMax) =>
+            rankingMin.calories.toString() - rankingMax.calories.toString()
+        )
+      });
+    } else if (filter === 'descendingEquality') {
+      this.setState({
+        businesses: [...data].sort(
+          (rankingMin, rankingMax) =>
+            rankingMax.calories.toString() - rankingMin.calories.toString()
+        )
+      });
+    }
+    // this.setState({
+    //   search: filter
+    // });
+  }
+
+  scrollTop() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div className="App">
         <Navbar>
-          <Navbar.Brand href="#home">Gender Equality</Navbar.Brand>
+          <Navbar.Brand onClick={this.scrollTop}>Gender Equality</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>Government Subsurdised Company</Navbar.Text>
           </Navbar.Collapse>
         </Navbar>
-        <Jumbotron fluid>
-          <Container>
-            <h1 className="pb-3">The Equality Group</h1>
-            <h2>
-              We are a government subsidised company that aims to provide job seekers the
-              opportunity to see whether a business values equality.
-            </h2>
-          </Container>
-        </Jumbotron>
         <main>
+          <Jumbotron fluid>
+            <Container>
+              <h1 className="pb-3">The Equality Group</h1>
+              <h2>
+                We are a government subsidised company that aims to provide job seekers the
+                opportunity to see whether a business values equality.
+              </h2>
+            </Container>
+          </Jumbotron>
           <div className="image-one"></div>
           <section className="d-flex pt-5 pb-5">
             <div className="col-6">
@@ -101,7 +128,7 @@ class App extends Component {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
               natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
             </p>
-            <Search search={this.searchBusiness} />
+            <Search search={this.searchBusiness} filter={this.filterBusiness} />
             <div className="businessContainer">
               {/* businesses being rendered here */}
               {this.state.businesses.map(business => {
@@ -111,16 +138,71 @@ class App extends Component {
                 ) {
                   return (
                     <Accordion defaultActiveKey="0" className="pt-3 pb-3">
-                      <Card>
+                      <Card className="hvr-grow">
                         <Card.Header>
                           <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                            <div className="pb-3">{business.name}</div>
+                            <h2>{business.name}</h2>
+                            <div className="pb-3 d-flex">
+                              <section className="col-6">
+                                <div className="indiviudal">
+                                  Number of Employees: {business.calories}
+                                </div>
+                                <div className="indiviudal">Business Age : .....</div>
+                              </section>
+                              <section className="col-6">
+                                <div className="indiviudal">Business Type: .....</div>
+                                <div className="indiviudal">
+                                  Special benefits for parenting: .....
+                                </div>
+                              </section>
+                            </div>
                             <ProgressBar now={60} />
                           </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="1">
-                          <Card.Body>
-                            <div>{business.calories}</div>
+                          <Card.Body className="comparisons">
+                            <section>
+                              <h5>Number of women to men</h5>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
+                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                              </ProgressBar>
+                            </section>
+                            <section>
+                              <h5>Number of women to men per position</h5>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
+                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                              </ProgressBar>
+                            </section>
+                            <section>
+                              <h5>Wages in different positions</h5>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
+                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                              </ProgressBar>
+                            </section>
+                            <section>
+                              <h5>People hired after 30+</h5>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
+                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                              </ProgressBar>
+                            </section>
+                            <section>
+                              <h5>Gender and type of contract relation</h5>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
+                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                              </ProgressBar>
+                            </section>
+                            <section>
+                              <h5>Number of gender applicants or interns</h5>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar variant="success" now={50} label={'50%'} key={1} />
+                                <ProgressBar variant="warning" now={50} label={'50%'} key={2} />
+                              </ProgressBar>
+                            </section>
                           </Card.Body>
                         </Accordion.Collapse>
                       </Card>

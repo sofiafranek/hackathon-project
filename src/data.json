@@ -30,7 +30,7 @@
     "men_temp": 57,
     "men_fixed": 58,
     "Av": 49.77,
-    "ranking": "green"
+    "ranking": 1
   },
   {
     "name": "Tom & Jerry Edwards Finances",
@@ -63,7 +63,7 @@
     "men_temp": 58,
     "men_fixed": 54,
     "Av": 53.28,
-    "ranking": "green"
+    "ranking": 1
   },
   {
     "name": "Nagel & Nagel Financial Business",
@@ -96,7 +96,7 @@
     "men_temp": 59,
     "men_fixed": 56,
     "Av": 56.56,
-    "ranking": "green"
+    "ranking": 1
   },
   {
     "name": "Fashionistas & Co",
@@ -129,7 +129,7 @@
     "men_temp": 30,
     "men_fixed": 36,
     "Av": 33.14,
-    "ranking": "yellow"
+    "ranking": 2
   },
   {
     "name": "Sewing Machines",
@@ -162,7 +162,7 @@
     "men_temp": 31,
     "men_fixed": 30,
     "Av": 27.1,
-    "ranking": "yellow"
+    "ranking": 2
   },
   {
     "name": "Fashion!",
@@ -195,7 +195,7 @@
     "men_temp": 24,
     "men_fixed": 28,
     "Av": 26.9,
-    "ranking": "yellow"
+    "ranking": 2
   },
   {
     "name": "Premier Tech",
@@ -228,7 +228,7 @@
     "men_temp": 58,
     "men_fixed": 57,
     "Av": 65.29,
-    "ranking": "yellow"
+    "ranking": 2
   },
   {
     "name": "TechyTechy",
@@ -261,7 +261,7 @@
     "men_temp": 61,
     "men_fixed": 66,
     "Av": 69.98,
-    "ranking": "yellow"
+    "ranking": 2
   },
   {
     "name": "CP4U",
@@ -294,6 +294,6 @@
     "men_temp": 70,
     "men_fixed": 64,
     "Av": 62.63,
-    "ranking": "yellow"
+    "ranking": 2
   }
 ]

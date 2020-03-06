@@ -27,6 +27,12 @@ class App extends Component {
   }
 
   searchBusiness(word) {
+    // console.log(word);
+    // if (this.state.search !== word) {
+    //   this.setState({
+    //     search: 'No Business or Industry found, please try again'
+    //   });
+    // }
     this.setState({
       search: word
     });

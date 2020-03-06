@@ -161,6 +161,10 @@ h5 {
   background-color: #f2e33a !important;
 }
 
+.red .progress-bar {
+  background-color: red !important;
+}
+
 .centered {
   text-align: center;
 }

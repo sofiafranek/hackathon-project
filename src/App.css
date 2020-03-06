@@ -153,8 +153,12 @@ h5 {
   line-height: 30px;
 }
 
-.progress-bar {
+.green .progress-bar {
   background-color: #73bf88 !important;
+}
+
+.yellow .progress-bar {
+  background-color: #dbcc27 !important;
 }
 
 .centered {

@@ -48,9 +48,6 @@ class App extends Component {
         )
       });
     }
-    // this.setState({
-    //   search: filter
-    // });
   }
 
   scrollTop() {
@@ -61,7 +58,10 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar>
-          <Navbar.Brand onClick={this.scrollTop}>Gender Equality</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <img className="logo-pic" src="./Images/genderpic.png" alt="genderpic" />
+            Gender Equality
+          </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>Government Subsurdised Company</Navbar.Text>
@@ -72,8 +72,10 @@ class App extends Component {
             <Container>
               <h1 className="pb-3">The Equality Group</h1>
               <h2>
-                We are a government subsidised company that aims to provide job seekers the
-                opportunity to see whether a business values equality.
+                We are a government subsidised company that created a simplified approach to measure
+                national gender equality in working environment. We aim to promote gender equality
+                in the workforce and requiring companies to report gender gap metrics and
+                increasingly implementing their own policies to close gender gaps.
               </h2>
             </Container>
           </Jumbotron>
@@ -127,11 +129,8 @@ class App extends Component {
           <section className="pt-5">
             <h3>04</h3>
             <h4 className="pb-5">Search here for the business </h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
-              natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
-            </p>
-            <Search search={this.searchBusiness} filter={this.filterBusiness} />
+            <p>Search by industry type or company name.</p>
+            <Search search={this.searchBusiness} />
             <div className="businessContainer">
               {/* businesses being rendered here */}
               {this.state.businesses.map(business => {

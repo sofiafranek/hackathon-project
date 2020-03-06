@@ -36,7 +36,8 @@ body {
 .border-offset-left {
   width: 100%;
   height: 500px;
-  padding: 15px;
+  padding: 10px;
+  padding-right: 5px;
   background-color: #81b2c7;
 }
 
@@ -71,10 +72,6 @@ h2 {
 
 .spacing-small {
   margin: 40px 0;
-}
-
-.spacing {
-  margin: 70px 0;
 }
 
 h3 {
@@ -120,11 +117,12 @@ h5 {
 }
 
 .comparisons section {
-  padding: 30px 0;
+  padding: 55px 0;
 }
 
 .jumbotron {
   margin-top: 66px;
+  margin-bottom: 0;
   background-color: white;
 }
 
@@ -141,6 +139,18 @@ h5 {
 
 .comparison-icon i {
   font-size: 2em;
+}
+
+.multiple-bars h6 {
+  margin-top: 30px;
+}
+
+.contact {
+  margin: 40px auto !important;
+}
+
+.contact h5 {
+  line-height: 30px;
 }
 
 .progress-bar {
@@ -180,6 +190,7 @@ h5 {
 
 .indiviudal {
   margin: 10px 0;
+  padding: 0;
 }
 
 .btn-link:focus {
@@ -191,8 +202,13 @@ link:focus {
   text-decoration: none;
 }
 
+.col-12 {
+  padding: 0;
+}
+
 .search-box .col-8 {
   padding-left: 0;
+  padding-right: 50px;
 }
 
 select {
@@ -213,8 +229,17 @@ select {
   padding: 0;
 }
 
+.text {
+  text-align: center;
+}
+
 .businessContainer h2 {
   margin-bottom: 10px;
+  font-size: 1.6em;
+}
+
+.businessContainer h5 {
+  font-size: 1.3em;
 }
 
 .image-one {
@@ -234,15 +259,9 @@ select {
 }
 
 .image-three {
-<<<<<<< HEAD
   background-image: url('./Images/photo-of-people-holding-each-other-s-hands-3184434.jpg');
   width: 100%;
   height: 400px;
-=======
-  background-image: url('./Images/kon-karampelas-YHUB8CuYWXI-unsplash.jpg');
-  width: 95%;
-  height: 375px;
->>>>>>> c62442f22850960c2b0e0021f00b953fefb634d4
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -338,4 +357,68 @@ footer ul {
 }
 smaller {
   font-weight: bold;
+}
+
+@media (max-width: 980px) {
+  .d-flex {
+    display: block !important;
+  }
+  .contact {
+    margin: 20px auto !important;
+  }
+  .col-6 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .padTop {
+    padding-top: 10px;
+  }
+  .mobileTop {
+    margin-top: 50px;
+  }
+  .col-7 {
+    margin: auto;
+    margin-bottom: 100px;
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  footer {
+    display: block;
+  }
+  .madeby {
+    display: block;
+    margin-top: 25px;
+  }
+  .col-4 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .filter {
+    margin-top: 30px;
+  }
+  .search-box .col-8 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .col-5 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .mobile {
+    margin-bottom: 0 !important;
+    position: relative !important;
+  }
+  .border-offset-left-mobile {
+    position: relative !important;
+    margin-top: 75px !important;
+  }
+  .image-three-mobile {
+    position: relative !important;
+  }
 }

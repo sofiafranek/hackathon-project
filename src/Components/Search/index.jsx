@@ -5,7 +5,7 @@ class Search extends Component {
     super(props);
     this.state = {
       search: '',
-      filter: 'hello'
+      filter: ''
     };
     this.startSearch = this.startSearch.bind(this);
     this.startFilter = this.startFilter.bind(this);
@@ -21,10 +21,7 @@ class Search extends Component {
   }
 
   startFilter(event) {
-    // const option = document.getElementsByTagName('option');
-    // console.log(option.value);
     const filter = event.target.value;
-    // console.log(filter);
     this.setState({
       filter
     });
@@ -44,7 +41,7 @@ class Search extends Component {
             autoComplete="off"
           />
         </form>
-        <select name="filter" className="col-4" onChange={this.startFilter}>
+        <select name="filter" className="col-4 filter" onChange={this.startFilter}>
           <option value="">--Filter by--</option>
           <option value="ascendingEquality">&uarr; Equality</option>
           <option value="descendingEquality">&darr; Equality</option>

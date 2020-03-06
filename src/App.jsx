@@ -36,15 +36,28 @@ class App extends Component {
     if (filter === 'ascendingEquality') {
       this.setState({
         businesses: [...data].sort(
-          (rankingMin, rankingMax) =>
-            rankingMin.calories.toString() - rankingMax.calories.toString()
+          (rankingMin, rankingMax) => rankingMin.ranking.toString() - rankingMax.ranking.toString()
         )
       });
     } else if (filter === 'descendingEquality') {
       this.setState({
         businesses: [...data].sort(
+          (rankingMin, rankingMax) => rankingMax.ranking.toString() - rankingMin.ranking.toString()
+        )
+      });
+    }
+    if (filter === 'descendingEmployees') {
+      this.setState({
+        businesses: [...data].sort(
           (rankingMin, rankingMax) =>
-            rankingMax.calories.toString() - rankingMin.calories.toString()
+            rankingMax.num_of_employees.toString() - rankingMin.num_of_employees.toString()
+        )
+      });
+    } else if (filter === 'ascendingEmployees') {
+      this.setState({
+        businesses: [...data].sort(
+          (rankingMin, rankingMax) =>
+            rankingMin.num_of_employees.toString() - rankingMax.num_of_employees.toString()
         )
       });
     }
@@ -68,31 +81,18 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar>
-          <Navbar.Brand href="#home">
-            <img className="logo-pic" src="./Images/genderpic.png" alt="genderpic" />
-            Equality Collective
+          <Navbar.Brand>
+            <span onClick={this.scrollTop}>
+              <img className="logo-pic" src="./Images/genderpic.png" alt="genderpic" />
+              Equality Collective
+            </span>
           </Navbar.Brand>
           <Navbar.Toggle />
-          {/* <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>Government Subsurdised Company</Navbar.Text>
-          </Navbar.Collapse> */}
         </Navbar>
-        <Jumbotron fluid>
-          <Container>
-            <h1 className="pb-3">Equality Collective</h1>
-            <h2>
-              We are a government subsidised company that created a simplified approach to measure
-              national gender equality in working environment. We aim to promote gender equality in
-              the workforce and requiring companies to report gender gap metrics and increasingly
-              implementing their own policies to close gender gaps.
-            </h2>
-          </Container>
-        </Jumbotron>
         <main>
-<<<<<<< HEAD
           <Jumbotron fluid>
             <Container>
-              <h1 className="pb-3">The Equality Group</h1>
+              <h1 className="pb-3">Equality Collective</h1>
               <h2>
                 We are a government subsidised company that created a simplified approach to measure
                 national gender equality in working environment. We aim to promote gender equality
@@ -103,25 +103,15 @@ class App extends Component {
               </h2>
             </Container>
           </Jumbotron>
-          <div className="image-one"></div>
-          <section className="d-flex pt-5 pb-5 ">
-            <div className="col-6">
-              <h3>
-                {' '}
-                <img className="icon" src="./Images/laptop.png" alt="icon" />
-              </h3>
-              <h4 className="pb-5">Check which companies values equality</h4>
-=======
           <div className="border-offset-left">
             <div className="image-one"></div>
           </div>
-          <section className="d-flex pt-5 pb-5 spacing-small">
+          <section className="d-flex pt-5 pb-5 ">
             <div className="col-6">
               <h3>
-                <i className="fas fa-equals"></i>
+                <img className="icon" src="./Images/laptop.png" alt="icon" />
               </h3>
-              <h4 className="pb-5">Check which companies value equality</h4>
->>>>>>> c62442f22850960c2b0e0021f00b953fefb634d4
+              <h4 className="pb-5">Check which companies values equality</h4>
             </div>
             <div className="col-6 padTop">
               <h5>Are you a job seeker?</h5>
@@ -161,7 +151,7 @@ class App extends Component {
               </p>
             </div>
           </section>
-          <section className="d-flex pt-5 pb-5 spacing">
+          <section className="d-flex pb-5 spacing">
             <div className="col-5">
               <h3>
                 {' '}
@@ -179,25 +169,18 @@ class App extends Component {
                 organisational reputation.
               </p>
             </div>
-            <div className="col-7">
-              <div className="border-offset-all">
-                <div className="image-three"></div>
+            <div className="col-7 mobile">
+              <div className="border-offset-all border-offset-left-mobile ">
+                <div className="image-three image-three-mobile"></div>
               </div>
             </div>
           </section>
-<<<<<<< HEAD
-          <section className="pt-5">
-            <h3>
+          <section className="pt-5 mobileTop">
+            <h3 className="centered pb-3">
               <img className="icon" src="./Images/search.png" alt="icon" />
             </h3>
-            <h4 className="pb-5"> Search here for the business:</h4>
-=======
-          <section>
-            <h3>04</h3>
-            <h4 className="pb-5">Search here for the business </h4>
-            <p>Search by industry type or company name.</p>
->>>>>>> c62442f22850960c2b0e0021f00b953fefb634d4
-            <Search search={this.searchBusiness} />
+            <h4 className="pb-3 centered"> Search</h4>
+            <Search search={this.searchBusiness} filter={this.filterBusiness} />
             <div className="businessContainer">
               {/* businesses being rendered here */}
               {this.state.businesses.map(business => {
@@ -212,18 +195,15 @@ class App extends Component {
                           <Accordion.Toggle as={Button} variant="link" eventKey="1">
                             <h2>{business.name}</h2>
                             <div className="pb-3 d-flex">
-                              <section className="col-6">
-                                <div className="indiviudal">
+                              <section className="col-12 d-flex">
+                                <div className="indiviudal col-4">
                                   Number of Employees: {business.num_of_employees}
                                 </div>
-                                <div className="indiviudal">
+                                <div className="indiviudal col-4">
                                   Business Age : {business.company_age}
                                 </div>
-                              </section>
-                              <section className="col-6">
-                                <div className="indiviudal">Business Type: {business.type}</div>
-                                <div className="indiviudal">
-                                  Special benefits for parenting: ...
+                                <div className="indiviudal col-4">
+                                  Business Type: {business.type}
                                 </div>
                               </section>
                             </div>
@@ -232,8 +212,8 @@ class App extends Component {
                         </Card.Header>
                         <Accordion.Collapse eventKey="1">
                           <Card.Body className="comparisons">
-                            <section>
-                              <h5>Number of women to men</h5>
+                            <section className="pt-0">
+                              <h5>Men to Women </h5>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -249,46 +229,43 @@ class App extends Component {
                                 />
                               </ProgressBar>
                             </section>
-                            <h5>Number of women to men per position salaries</h5>
-                            <small>Manager salary comparsion</small>
-                            <section className="d-flex justify-content-center centered">
-                              <div className="col-4">
-                                <h5>Women</h5>
-                                <h4>{business.avgsal_women_manager}€</h4>
-                              </div>
-                              <div className="col-4 comparison-icon">
-                                <i className="fas fa-not-equal"></i>
-                                <small>difference caluclate maybe?</small>
-                              </div>
-                              <div className="col-4">
-                                <h5>Male</h5>
-                                <h4>{business.avgsal_man_manager}€</h4>
-                              </div>
-                            </section>
-                            <small>director salary comparsion</small>
-                            <section className="d-flex justify-content-center centered">
+                            <h5>Men to Women Salaries</h5>
+                            <h6>Director Comparsion</h6>
+                            <section className="d-flex justify-content-center text">
                               <div className="col-4">
                                 <h5>Women</h5>
                                 <h4>{business.avgsal_women_director}€</h4>
                               </div>
                               <div className="col-4 comparison-icon">
                                 <i className="fas fa-not-equal"></i>
-                                <small>difference caluclate maybe?</small>
                               </div>
                               <div className="col-4">
                                 <h5>Male</h5>
                                 <h4>{business.avgsal_man_director}€</h4>
                               </div>
                             </section>
-                            <small>intern salary comparsion</small>
-                            <section className="d-flex justify-content-center centered">
+                            <h6>Manager Comparsion</h6>
+                            <section className="d-flex justify-content-center text">
+                              <div className="col-4">
+                                <h5>Women</h5>
+                                <h4>{business.avgsal_women_manager}€</h4>
+                              </div>
+                              <div className="col-4 comparison-icon">
+                                <i className="fas fa-not-equal"></i>
+                              </div>
+                              <div className="col-4">
+                                <h5>Male</h5>
+                                <h4>{business.avgsal_man_manager}€</h4>
+                              </div>
+                            </section>
+                            <h6>Intern Comparsion</h6>
+                            <section className="d-flex justify-content-center text">
                               <div className="col-4">
                                 <h5>Women</h5>
                                 <h4>{business.avgsal_women_intern}€</h4>
                               </div>
                               <div className="col-4 comparison-icon">
                                 <i className="fas fa-not-equal"></i>
-                                <small>difference caluclate maybe?</small>
                               </div>
                               <div className="col-4">
                                 <h5>Male</h5>
@@ -296,24 +273,9 @@ class App extends Component {
                               </div>
                             </section>
 
-                            <section>
+                            <section className="multiple-bars">
                               <h5>Wages in different positions</h5>
-                              <small>assistant men</small>
-                              <ProgressBar className="comparison-bar">
-                                <ProgressBar
-                                  variant="success"
-                                  now={JSON.stringify(business.assistant_men)}
-                                  label={business.assistant_men + '%'}
-                                  key={1}
-                                />
-                                <ProgressBar
-                                  variant="warning"
-                                  now={JSON.stringify(100 - business.assistant_men)}
-                                  label={100 - business.assistant_men + '%'}
-                                  key={2}
-                                />
-                              </ProgressBar>
-                              <small>director men</small>
+                              <h6>Director Men to Women</h6>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -328,7 +290,7 @@ class App extends Component {
                                   key={2}
                                 />
                               </ProgressBar>
-                              <small>specialit in the field the business is in</small>
+                              <h6>Specialist in Field Men to Women</h6>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -343,9 +305,24 @@ class App extends Component {
                                   key={2}
                                 />
                               </ProgressBar>
+                              <h6>Assistant Men to Women</h6>
+                              <ProgressBar className="comparison-bar">
+                                <ProgressBar
+                                  variant="success"
+                                  now={JSON.stringify(business.assistant_men)}
+                                  label={business.assistant_men + '%'}
+                                  key={1}
+                                />
+                                <ProgressBar
+                                  variant="warning"
+                                  now={JSON.stringify(100 - business.assistant_men)}
+                                  label={100 - business.assistant_men + '%'}
+                                  key={2}
+                                />
+                              </ProgressBar>
                             </section>
                             <section>
-                              <h5>People hired after 30+</h5>
+                              <h5>People Hired After 30+</h5>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -361,9 +338,9 @@ class App extends Component {
                                 />
                               </ProgressBar>
                             </section>
-                            <section>
-                              <h5>Gender and type of contract relation</h5>
-                              <small>contact type temporary</small>
+                            <section className="multiple-bars">
+                              <h5>Type of Contract Relation</h5>
+                              <h6>Men to Women Contact Type - Temporary</h6>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -378,7 +355,7 @@ class App extends Component {
                                   key={2}
                                 />
                               </ProgressBar>
-                              <small>contact type permanant</small>
+                              <h6>Men to Women Contact Type - Permanent</h6>
                               <ProgressBar className="comparison-bar">
                                 <ProgressBar
                                   variant="success"
@@ -403,9 +380,8 @@ class App extends Component {
               })}
             </div>
           </section>
-          <section className="centered pt-5 pb-5">
-            <h3>05</h3>
-            <h4 className="pb-3">Contac us</h4>
+          <section className="centered pt-5 pb-5 contact">
+            <h4 className="pb-3">Contact us</h4>
             <h5>
               Get in touch to see how our services can make an impact on your business. Hire our
               consulting services and achieve grow company results.

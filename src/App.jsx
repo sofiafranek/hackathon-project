@@ -37,23 +37,24 @@ class App extends Component {
           <Navbar.Brand href="#home">Gender Equality</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>Something here</Navbar.Text>
+            <Navbar.Text>Government Subsurdised Company</Navbar.Text>
           </Navbar.Collapse>
         </Navbar>
         <Jumbotron fluid>
           <Container>
-            <h1 className="pb-3">Gender Equality</h1>
+            <h1 className="pb-3">The Equality Group</h1>
             <h2>
-              This is a modified jumbotron that occupies the entire horizontal space of its parent.
+              We are a government subsidised company that aims to provide job seekers the
+              opportunity to see whether a business values equality.
             </h2>
           </Container>
         </Jumbotron>
         <main>
-          <div>Image here??</div>
+          <div className="image-one"></div>
           <section className="d-flex pt-5 pb-5">
             <div className="col-6">
               <h3>01</h3>
-              <h4 className="pb-3">What is gender equality?</h4>
+              <h4 className="pb-5">What is gender equality?</h4>
             </div>
             <div className="col-6">
               <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
@@ -65,11 +66,13 @@ class App extends Component {
           </section>
           <section className="d-flex pt-5 pb-5">
             <div className="col-8">
-              <div>Image here??</div>
+              <div className="image-two"></div>
             </div>
             <div className="col-4">
-              <h3>02</h3>
-              <h4 className="pb-3">What do you value in a business?</h4>
+              <div className="space">
+                <h3>02</h3>
+                <h4 className="pb-5">What do you value in a business?</h4>
+              </div>
               <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
@@ -77,9 +80,23 @@ class App extends Component {
               </p>
             </div>
           </section>
+          <section className="d-flex pt-5 pb-5">
+            <div className="col-5">
+              <h3>03</h3>
+              <h4 className="pb-5">Another title</h4>
+              <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
+                natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
+              </p>
+            </div>
+            <div className="col-7">
+              <div className="image-three"></div>
+            </div>
+          </section>
           <section className="pt-5">
-            <h3>03</h3>
-            <h4 className="pb-3">Search here for the business </h4>
+            <h3>04</h3>
+            <h4 className="pb-5">Search here for the business </h4>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi aperiam
               natus. Explicabo eius, placeat exercitationem libero nostrum incidunt veniam.
@@ -114,7 +131,7 @@ class App extends Component {
             </div>
           </section>
           <section className="centered pt-5 pb-5">
-            <h3>04</h3>
+            <h3>05</h3>
             <h4 className="pb-3">Let us know what you think</h4>
             <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere.</h5>
             <p>

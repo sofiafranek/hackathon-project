@@ -4,9 +4,11 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: ''
+      search: '',
+      filter: 'hello'
     };
     this.startSearch = this.startSearch.bind(this);
+    this.startFilter = this.startFilter.bind(this);
   }
 
   startSearch(event) {
@@ -18,19 +20,37 @@ class Search extends Component {
     this.props.search(search);
   }
 
+  startFilter(event) {
+    // const option = document.getElementsByTagName('option');
+    // console.log(option.value);
+    const filter = event.target.value;
+    // console.log(filter);
+    this.setState({
+      filter
+    });
+    this.props.filter(filter);
+  }
+
   render() {
     return (
-      <div className="search-box pb-4">
-        <form>
+      <div className="search-box mb-5 mt-5 d-flex">
+        <form className="col-8">
           <input
             type="search"
             name="search"
             value={this.state.search}
             onChange={this.startSearch}
-            placeholder="Search..."
+            placeholder="Search by Business Name or Industry"
             autoComplete="off"
           />
         </form>
+        <select name="filter" className="col-4" onChange={this.startFilter}>
+          <option value="">--Filter by--</option>
+          <option value="ascendingEquality">&uarr; Equality</option>
+          <option value="descendingEquality">&darr; Equality</option>
+          <option value="ascendingEmployees">&uarr; Employees</option>
+          <option value="descendingEmployees">&darr; Employees</option>
+        </select>
       </div>
     );
   }
